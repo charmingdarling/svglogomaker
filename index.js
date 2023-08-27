@@ -1,8 +1,8 @@
-// Modules, requiring these modules
+// Modules, importing/requiring these modules
 const inquirer = require("inquirer");
 const fs = require("fs");
 
-// Scripts, requiring these scripts
+// Scripts, importing these scripts
 const generateSVG = require(".lib/generateShape");
 const questions = require("./lib/questions");
 const { Circle, Triangle, Square } = require("./lib/shapes");
