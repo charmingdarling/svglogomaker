@@ -21,7 +21,7 @@ const askUser = async (answers) => {
 };
 
 const createShape = "Creating Shape";
-fs.writeFile("...", createShape, (err) =>
+fs.writeFile("/assets/svglogo.png", createShape, (err) =>
   err
     ? console.error("Error. SVG Logo not created.", err)
     : console.log("You created an SVG logo.")
