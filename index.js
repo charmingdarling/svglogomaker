@@ -1,21 +1,35 @@
 // Modules, requiring these modules
-
-const path = require("path");
 const inquirer = require("inquirer");
 const fs = require("fs");
 
 // Scripts, requiring these scripts
 const generateSVG = require("");
-const questions = require("./library/questions");
+const questions = require("./lib/questions");
+const { Circle, Triangle, Square } = require("./lib/shapes.js");
 
 function init() {
-  inquirer.createPromptModule(questions);
+  // Promise STARTED, is executing work sometime, but the work is NOT completed
+  inquirer.promptScriptQuestions(questions);
+  console.log("Starting to ask questions"); //
 }
+// Async prepares node to tell them that this next function has an "await" and it needs to wait. This promise may get rejected or resolved.
+// (answers) is the parameter pointing to the function
+const askUser = async (answers) => {
+  // Promise is COMPLETED here
+  const answers = await inquirer.promptScriptQuestions(questions);
+  console.log(answer);
+};
 
-async function asyncAnswer() {
-  console.log('This comes first.');
-  const result = await resolveAfter2Seconds();
-  console.log('This is the result.')
-}
+const createShape = "Creating Shape";
+fs.writeFile("...", createShape, (err) =>
+  err
+    ? console.error("Error. SVG Logo not created.", err)
+    : console.log("You created an SVG logo.")
+);
 
-const test = 
+init();
+
+// Promises (rejected, resolved) : When something gives you back a promise and if it is run it will PASS OR FAIL.
+
+// PASS = Resolved
+// FAIL = Rejected
