@@ -3,30 +3,43 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 
 // Scripts, importing these scripts
-const generateSVG = require(".lib/generateShape");
 const questions = require("./lib/questions");
 const { Circle, Triangle, Square } = require("./lib/shapes");
 
-function init() {
-  // Promise STARTED, is executing work sometime, but the work is NOT completed at this time
-  inquirer.prompt(questions);
-  console.log("Starting to ask questions");
-}
 // Async prepares node to tell them that this next function has an "await" and it needs to wait. This promise may get rejected or resolved.
-// (answers) is the parameter pointing to the function
-const askUser = async (answers) => {
-  // Promise is COMPLETED here
+async function init() {
   const answers = await inquirer.prompt(questions);
-  console.log(answer);
-  const createShape;
-  fs.writeFile("/assets/svglogo.png", createShape, (err) =>
+  let createShapeObj;
+  switch (answers.shape) {
+    case "circle":
+      console.log("User has chosen the circle shape.");
+      // Creating a new circle instance
+      createShapeObj = new Circle();
+      break;
+    case "triangle":
+      console.log("User has chosen the triangle shape.");
+      createShapeObj = new Triangle();
+      break;
+    case "square":
+      console.log("User has chosen the square shape.");
+      createShapeObj = new Square();
+      break;
+    default:
+      console.log("Error. Unsupported shape.");
+      return;
+  }
+
+  const svgContent = createShapeObj.render();
+
+  fs.writeFile("./assets/logo.svg", "svgContent", (err) =>
     err
       ? console.error("Error. SVG Logo not created.", err)
       : console.log("You created an SVG logo.")
   );
-};
+}
+
 // Function to initialize
-askUser();
+init();
 
 // Promises (rejected, resolved) : When something gives you back a promise and if it is run it will PASS OR FAIL.
 // PASS = Resolved
