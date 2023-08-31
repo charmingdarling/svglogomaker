@@ -2,13 +2,11 @@
 
 ## Your Task
 
-Your task is to build a Node.js command-line application that takes in user input to generate a logo and save it as an [SVG file](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics). The application prompts the user to select a color and shape, provide text for the logo, and save the generated SVG to a `.svg` file.
+Our task is to build a Node.js command-line application that prompts user input to generate a logo and save it as an SVG file. The user is prompted to provide 3 text characters, select a shape, and select color for the text and shape to create a logo. When the user is finished with the prompt, a generated logo is created and saved to an `.svg` file.
 
-Because this application won’t be deployed, you’ll need to provide a link to a walkthrough video that demonstrates its functionality and passes all of the tests. You’ll need to submit a link to the video **and** add it to the README of your project.
+Refer to this [Video](http) to see a walkthrough video. This will demonstrate the functionality of the application and that this passes all tests.
 
 Refer to the [Video Submission Guide](https://coding-boot-camp.github.io/full-stack/computer-literacy/video-submission-guide) on the Full-Stack Blog for additional guidance on creating a video.
-
-> **Note**: There is no starter code for this assignment.
 
 ### User Story
 
@@ -34,7 +32,7 @@ WHEN I have entered input for all the prompts
 THEN an SVG file is created named `logo.svg`
 AND the output text "Generated logo.svg" is printed in the command line
 WHEN I open the `logo.svg` file in a browser
-THEN I am shown a 300x200 pixel image that matches the criteria I entered
+THEN I am shown a pixel image that matches the criteria I entered
 ```
 
 ## Mock-Up
@@ -169,4 +167,5 @@ You are required to submit the following for review:
 ---
 
 © 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+
 # svglogomaker
