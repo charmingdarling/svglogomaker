@@ -49,7 +49,7 @@ node index.js
 
 ## Mock-Up
 
-The following images shows an example of the generated SVG given the following input entered by the user: `ABC` for the text, `white` for the text color, `circle` fromt he list of shapes, and `blue` for the shape color. This is an image of the output SVG and not the SVG file itself:
+The following images shows an example of the generated SVG given the following input entered by the user: `ABC` for the text, `white` for the text color, `circle` from the list of shapes, and `blue` for the shape color. This is an image of the output SVG and not the SVG file itself:
 
 ![Image showing a blue circle with white text that reads "ABC".](./examples/blue_abc_svg.png)
 
