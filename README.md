@@ -6,7 +6,11 @@ Our task is to build a Node.js command-line application that prompts user input 
 
 ## Walkthrough Video:
 
-Refer to this [Video](http) to see a walkthrough video. This will demonstrate the functionality of the application and that this passes all tests.
+Refer to this [Video](https://drive.google.com/file/d/1HCmn4bqqFfnTz0-y3bJqG6B-KvuUZpEO/view) to see a walkthrough video. This will demonstrate the functionality of the application and that this passes all tests.
+
+## Link to GitHub
+
+- [GitHub](https://github.com/charmingdarling/svglogomaker)
 
 ## User Story
 
